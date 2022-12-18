@@ -7,7 +7,7 @@ public class Main {
         System.out.println("ЗАДАНИЕ 2");
         printParameters(1,2022);
         System.out.println("ЗАДАНИЕ 3");
-        printCountDays(109);
+        printCountDays(95);
     }
     //ЗАДАНИЕ 1
     public static boolean countDate(int year) {
@@ -50,12 +50,15 @@ public class Main {
         } else if ( deliveryDistance <= 100) {
             return 3;
         } else {
-            System.out.println("Свыше 100 км доставки нет.");
             return 0;
         }
     }
     public static void printCountDays(int  deliveryDistance){
-        System.out.println("Потребуется дней: " + distance( deliveryDistance));
+        if (deliveryDistance > 100){
+        System.out.println("Свыше 100 км доставки нет.");
+    } else {
+            System.out.println("Потребуется дней: " + distance(deliveryDistance));
+        }
 
     }
 }
